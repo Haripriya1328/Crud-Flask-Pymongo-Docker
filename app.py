@@ -11,8 +11,6 @@ app.secret_key = "secretkey"
 app.config['MONGO_URI'] = os.environ.get('MONGO_URI', 'mongodb://localhost:27017/Users')
 mongo = PyMongo(app)
 
-# ... (rest of the code remains the same)
-
 
 @app.route('/add', methods=['POST'])
 def add_user():
@@ -78,4 +76,3 @@ def not_found(error=None):
 
 if __name__ == "__main__":
     app.run(debug=True)
-
