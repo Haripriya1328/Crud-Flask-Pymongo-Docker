@@ -1,11 +1,14 @@
-version: "3"
-services: 
-    mymongo_1:
-        image: "mongo"
-    
-    myreader:
-        build: .
-        depends_on: 
-            - mymongo_1
-        ports:
-            - "5000:5000"
+version: '3'
+services:
+  web:
+    build: .
+    ports:
+      - "5000:5000"
+    volumes:
+      - .:/app
+    environment:
+      MONGO_URI: "mongodb://localhost:27017/Users"
+  mongo:
+    image: mongo
+    ports:
+      - "27017:27017"
