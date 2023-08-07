@@ -8,7 +8,8 @@ Step 2: Open the app.py file in your code editor.
         Set the MongoDB URI and database name in the Flask application configuration
 
         
-Step 3: Run using the Command "python app.py"( if your not using Docker )
+Step 3: Run using the Command "python app.py"( if your not using Docker ),
+        if you use docker- start the docker and use the commands: docker-compose build and docker-compose up
 
 
 Step 4: Test the Working Using Postman
